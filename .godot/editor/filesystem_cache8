@@ -1,8 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738691646
+::res://::1738698842
 icon.svg::CompressedTexture2D::8296631976299673912::1738690856::1738690862::1::::<><>::
+main_scene.tscn::PackedScene::3996162228628934606::1738697921::0::1::::<><>::uid://bboi33d1vt3k7::::res://Assets/Art/CaveTiles1/CaveBG.png<>uid://ckl0btx6c1qq0::::res://Assets/Art/CaveTiles1/CaveG.png
+README.md::TextFile::-1::1738691845::0::1::::<><>::
 ::res://Assets/::1738691686
-::res://Assets/Art/::1738691673
+::res://Assets/Art/::1738698842
+::res://Assets/Art/CaveTiles1/::1738695968
+CaveBG.png::CompressedTexture2D::2486048030557819980::1595771844::1738695472::1::::<><>::
+CaveG.png::CompressedTexture2D::5498958704560616073::1595771841::1738695968::1::::<><>::
+ParallaxCave1.png::CompressedTexture2D::2791627241914045387::1595771838::1738695472::1::::<><>::
+ParallaxCave2.png::CompressedTexture2D::8245488636725046336::1595771835::1738695472::1::::<><>::
+ParallaxCave3.png::CompressedTexture2D::6653595290430157798::1595771832::1738695472::1::::<><>::
+ParallaxCave4.png::CompressedTexture2D::130689520254447752::1595771828::1738695472::1::::<><>::
+::res://Assets/Art/diver/::1738698900
+diver1.png::CompressedTexture2D::8477342118292344257::1738698900::1738698900::1::::<><>::
+::res://Assets/Art/DumbTiles/::1738694448
+Asset 1.png::CompressedTexture2D::7439220036948540772::1738694444::1738694444::1::::<><>::
+Asset 2.png::CompressedTexture2D::2654649463900078191::1738694448::1738694448::1::::<><>::
 ::res://Assets/Audio/::1738691679
 ::res://Assets/Fonts/::1738691686
 ::res://Data/::1738691663
@@ -12,6 +26,14 @@ icon.svg::CompressedTexture2D::8296631976299673912::1738690856::1738690862::1:::
 ::res://Scenes/Map/::1738691714
 ::res://Scenes/Player/::1738691703
 ::res://Scenes/UI/::1738691719
-::res://Scripts/::1738691735
-::res://Scripts/Map/::1738691735
-::res://Scripts/Player/::1738691727
+::res://Scripts/::1738693248
+::res://Scripts/HUD/::1738693266
+HUD.gd::GDScript::-1::1738693266::0::1::::<>CanvasLayer<>::
+::res://Scripts/Map/::1738692067
+Map.gd::GDScript::-1::1738692067::0::1::::<>Node<>::
+::res://Scripts/Player/::1738693145
+Player.gd::GDScript::-1::1738693145::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Systems/::1738693533
+GameManager.gd::GDScript::-1::1738693466::0::1::::<>Node<>::
+SaveSystem.gd::GDScript::-1::1738693533::0::1::::<>Node<>::
+SoundManager.gd::GDScript::-1::1738692280::0::1::::<>Node<>::

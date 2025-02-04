@@ -1,8 +1,8 @@
 .import/
 *.import 
 
-export/
-
+.export/
+.cache/
 *.translation
 
 .DS_Store

@@ -1,0 +1,6 @@
+res://Scripts/Systems/GameManager.gd
+res://main_scene.tscn
+res://Scripts/Player/Player.gd
+res://Scripts/HUD/HUD.gd
+res://Scripts/Systems/Global.gd
+res://Scripts/Systems/SaveSystem.gd
