@@ -18,6 +18,11 @@ var player_health: int = 100
 var max_health: int = 100
 var oxygen: int = 100
 var max_oxygen: int = 100
+var weight: int = 10
+var BcdCapacity: float = 10
+var BcdInflation: float = 0  
+var buoancy: float =  (BcdInflation*BcdCapacity) - weight
+var Mobility: float = 0 #dummy value
 
 # Game state
 var game_paused: bool = false
