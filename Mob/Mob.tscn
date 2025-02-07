@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8i7a05824we3"]
+
+[ext_resource type="Script" path="res://Scripts/Mob/Mob.gd" id="1_pjnhb"]
+[ext_resource type="Texture2D" uid="uid://dufccg4f3d6la" path="res://Assets/Art/Mob/enemySwimming_1.png" id="2_na4e8"]
+[ext_resource type="Texture2D" uid="uid://b2er7x0v04e35" path="res://Assets/Art/Mob/enemySwimming_2.png" id="3_iqmex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fltpk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_na4e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iqmex")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 5.0
+}]
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_pjnhb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_fltpk")
+animation = &"swim"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
