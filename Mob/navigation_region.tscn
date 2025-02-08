@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://smcc7klk58mv"]
-
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_ljaby"]
-vertices = PackedVector2Array(927, 9.21875, 927, 411.398, 376.273, 434.117, 332.102, -38.9922)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(321.036, -49.927, 937, 0, 937, 421, 367.205, 444.511)])
-
-[node name="NavigationRegion2D" type="NavigationRegion2D"]
-navigation_polygon = SubResource("NavigationPolygon_ljaby")
