@@ -1902,7 +1902,7 @@ tile_set = SubResource("TileSet_54ow2")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
-position = Vector2(-136.36, -165.35)
+position = Vector2(1.0737, -66.0325)
 motion_mode = 1
 script = ExtResource("4_pwyh5")
 metadata/_edit_group_ = true
