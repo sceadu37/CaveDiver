@@ -1910,15 +1910,15 @@ navigation_polygon = SubResource("NavigationPolygon_0diyu")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
+[node name="PlayerBody" type="CharacterBody2D" parent="Player"]
 position = Vector2(-136.36, -165.35)
 motion_mode = 1
 script = ExtResource("4_pwyh5")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/CharacterBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/PlayerBody"]
 polygon = PackedVector2Array(30, 81, 20, 76, 9, 75, 1, 70, -5, 69, -10, 69, -17, 70, -20, 66, -23, 58, -18, 49, -10, 49, -4, 54, 8, 59, 8, 66, 16, 68, 23, 68, 31, 75)
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Player/PlayerBody"]
 position = Vector2(6, 66)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_mpcjb")
@@ -1948,4 +1948,6 @@ offset_right = 4.0
 offset_bottom = 27.0
 
 [node name="Mob" parent="." instance=ExtResource("5_o7yvq")]
+editor_description = " Default Mob Template "
+motion_mode = 1
 awareness = 0.5
