@@ -1,8 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8i7a05824we3"]
+[gd_scene load_steps=8 format=3 uid="uid://c8i7a05824we3"]
 
 [ext_resource type="Script" path="res://Scripts/Mob/Mob.gd" id="1_pjnhb"]
+[ext_resource type="Shader" path="res://Mob/MobDead.gdshader" id="2_41dkk"]
 [ext_resource type="Texture2D" uid="uid://dufccg4f3d6la" path="res://Assets/Art/Mob/enemySwimming_1.png" id="2_na4e8"]
 [ext_resource type="Texture2D" uid="uid://b2er7x0v04e35" path="res://Assets/Art/Mob/enemySwimming_2.png" id="3_iqmex"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ca8wf"]
+shader = ExtResource("2_41dkk")
+shader_parameter/alive = true
+shader_parameter/red_factor = 1.0
+shader_parameter/green_factor = 1.0
+shader_parameter/blue_factor = 1.0
+shader_parameter/alpha_factor = 1.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fltpk"]
 animations = [{
@@ -26,6 +35,7 @@ height = 42.0
 script = ExtResource("1_pjnhb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ca8wf")
 scale = Vector2(0.3, 0.25)
 sprite_frames = SubResource("SpriteFrames_fltpk")
 animation = &"swim"
