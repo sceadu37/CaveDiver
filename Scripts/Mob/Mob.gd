@@ -21,9 +21,12 @@ func die():
 	$AnimatedSprite2D.material.set_shader_parameter("red_factor", 0.5)
 	$AnimatedSprite2D.material.set_shader_parameter("green_factor", 0.5)
 	$AnimatedSprite2D.material.set_shader_parameter("blue_factor", 0.5)
-	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("death")
 	
-	
+	#func attack():
+		
+		
+		
 
 func _physics_process(delta: float) -> void:
 	
@@ -38,6 +41,8 @@ func _physics_process(delta: float) -> void:
 		nav.target_position = player.global_position
 		#print("Distance to player: ", nav.distance_to_target())
 		
+		#print(rotation/PI)
+		
 		# persue if within aggro range
 		if nav.distance_to_target() <= detection_range:
 			# create a vector of length 1 pointing towards the next pathfinding point
@@ -48,6 +53,7 @@ func _physics_process(delta: float) -> void:
 			velocity = velocity.lerp(direction * speed, accel * delta)
 			# rotate sprite to match movement direction
 			rotation = velocity.angle()
+				
 		# return to idle
 		elif velocity.length() != 0:
 			#decelerate towards 0
@@ -55,14 +61,22 @@ func _physics_process(delta: float) -> void:
 			#rotate towards 0; will be replaced with an "idle" animation & movement pattern
 			rotation = clampf(rotation - rotation * accel/2 * delta, min(0, rotation), max(0, rotation))
 		
-		
 		if velocity.length() != 0:
 			$AnimatedSprite2D.play("swim")
 		else:
-			$AnimatedSprite2D.stop()
+			$AnimatedSprite2D.play("idle")
+		
+		# flip sprite only on vertical axis bc rotation takes care of the horizontal flip
+		if rotation > PI/2 or rotation < -PI/2:
+			$AnimatedSprite2D.flip_v = true
+		else:
+			$AnimatedSprite2D.flip_v = false	
+	
 	# if dead, drift to cave floor
 	else:
 		velocity = velocity.lerp(Vector2.DOWN * 25, 10 * delta)
+		
+		
 	
 	move_and_slide()
 	#check for player collisions
